@@ -1,0 +1,31 @@
+<body class="body">
+    
+
+<div class="column body">
+<input type="text" (keyup.enter)="saveTask()" [(ngModel)]="task"><button (click)="saveTask()">Add Task</button>
+</div>
+<h1 style="text-align: center; color: wheat;">TASKS</h1>
+<div class="todo wrapper">
+<!--boton limpiar-->
+    <b (click)="clear('tasksList')" style="color: rgb(255, 196, 0);">To do</b>
+
+    <div *ngFor="let task of tasksList; let index = index;let count = count" class="wordWrap space">
+        <span class="white"> • {{task}} </span> <span (click)="deleteTask(index)"><button mat-stroked-button color="warn">Delete</button></span>  <span (click)="rememberTask(task,index)"><button mat-stroked-button color="primary">Remember</button></span> 
+    </div>
+</div>
+<!--boton limpiar-->
+<div class="remember wrapper">
+    <b (click)="clear('remembered')" style="color:rgb(0, 119, 255)">Doing</b>
+
+    <div *ngFor="let remember of remembered; let index = index" class="wordWrap space">
+       <span class="white"> • {{remember}}  </span><span (click)="removeRemember(index)"><button mat-stroked-button color="warn">Delete</button></span><span style (click)="rememberCompleted(remember,index)" ><button mat-stroked-button color="" style="color: green; ">Completed</button></span>
+    </div>
+</div>
+
+<div class="completed wrapper wordWrap">
+    <b style="color:rgb(31, 177, 97)" (click)="clear('completed')">Completed</b>
+    <div *ngFor="let complete of completed; let index = index"  >
+        <span class="white"> • {{complete}} </span>
+    </div>
+</div>
+</body>

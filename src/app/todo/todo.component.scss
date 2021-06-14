@@ -1,0 +1,41 @@
+.column{
+    display: flex;
+    flex-direction: column;
+    height: 65px;
+}
+.todo{
+    height: 500px;
+    width: 33%;
+    border: 1px solid rgb(255, 196, 0);
+    display: inline-block;
+    margin-left: 7px;
+    text-align: center;
+    
+}
+.remember{
+    display: inline-block;
+    height: 500px;
+    width: 33%;
+    border: 1px solid rgb(0, 119, 255);
+    text-align: center;
+}
+.completed{
+    display: inline-block;
+    height: 500px;
+    width: 33%;
+    border: 1px solid rgb(0, 252, 84);
+    text-align: center;
+}
+.wrapper {vertical-align:top; }
+.wordWrap { word-wrap: break-word; }
+
+
+.space{
+    height: 45px;
+}
+body { background-color: rgb(26, 26, 26); }
+
+.white{
+    color:rgb(141, 145, 144)
+
+}
