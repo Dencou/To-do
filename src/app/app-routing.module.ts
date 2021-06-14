@@ -4,7 +4,8 @@ import { TodoComponent } from './todo/todo.component';
 
 const routes: Routes = [
   {path:`todo`, component:TodoComponent},
-  {path:``,redirectTo:`/todo`, pathMatch:`full` }
+  {path:``,redirectTo:`/todo`, pathMatch:`full` },
+  {path:``, component:TodoComponent}
 ];
 
 @NgModule({
